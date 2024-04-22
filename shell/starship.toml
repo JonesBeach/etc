@@ -1,0 +1,61 @@
+format = """
+$directory\
+[ ](fg:#87af5f bg:#394260)\
+$git_branch\
+$rust\
+$python\
+$nodejs\
+$java\
+$gradle\
+$ruby\
+$c\
+[ ](fg:#394260)\
+"""
+
+add_newline = false
+
+[directory]
+style = "fg:#000000 bg:#87af5f"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol  $branch ](fg:#87af5f bg:#394260)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol  ($version) ](fg:#87af5f bg:#394260)]($style)'
+
+[python]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol  ($version) ${virtualenv} ](fg:#87af5f bg:#394260)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol  ($version) ](fg:#87af5f bg:#394260)]($style)'
+
+[java]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol  ($version) ](fg:#87af5f bg:#394260)]($style)'
+
+[gradle]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol  ($version) ](fg:#87af5f bg:#394260)]($style)'
+
+[ruby]
+symbol = "󰴭"
+style = "bg:#394260"
+format = '[[ $symbol  ($version) ](fg:#87af5f bg:#394260)]($style)'
+
+[c]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol  ($version) ](fg:#87af5f bg:#394260)]($style)'
