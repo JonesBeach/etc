@@ -20,10 +20,9 @@ export HISTCONTROL=ignoreboth
 # Reference: https://the.exa.website/docs/colour-themes
 export EZA_COLORS="gm=1;34:da=1;34"
 alias ls="eza"
+alias lst="eza --tree --git-ignore" # Tree view
 alias ll="eza -lao --icons=always --git-ignore --git"
-alias llR="eza -laoT --icons=always --git-ignore --git"
 alias llt="eza -lao -s modified --icons=always --git-ignore --git"
-alias llf="ls -lhtrd $PWD/*"
 
 alias u="cd .."
 alias u2="cd ../.."
