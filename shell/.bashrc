@@ -33,6 +33,7 @@ alias c="clear"
 alias tr="cd ~/Documents/repos"
 
 alias v="nvim"
+alias vr="v README.md"
 alias g="grep -rIi"
 alias fz="fd | fzf | xargs nvim"
 
