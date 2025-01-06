@@ -174,6 +174,7 @@ require("mason-lspconfig").setup {
     "asm_lsp",       -- NASM assembly (x86)
     "verible",       -- SystemVerilog
     "ocamllsp",      -- OCaml
+    "html",          -- HTML (uses this under the hood: https://github.com/hrsh7th/vscode-langservers-extracted)
   },
 }
 
@@ -238,6 +239,7 @@ require 'lspconfig'.asm_lsp.setup {}
 require 'lspconfig'.verible.setup {}
 require 'lspconfig'.hls.setup {}
 require 'lspconfig'.ocamllsp.setup {}
+require 'lspconfig'.html.setup {}
 
 -- These are the main LSP keymappings.
 vim.api.nvim_create_autocmd('LspAttach', {
