@@ -173,6 +173,7 @@ require("mason-lspconfig").setup {
     "bashls",        -- Bash
     "asm_lsp",       -- NASM assembly (x86)
     "verible",       -- SystemVerilog
+    "ocamllsp",      -- OCaml
   },
 }
 
@@ -236,6 +237,7 @@ require 'lspconfig'.bashls.setup {}
 require 'lspconfig'.asm_lsp.setup {}
 require 'lspconfig'.verible.setup {}
 require 'lspconfig'.hls.setup {}
+require 'lspconfig'.ocamllsp.setup {}
 
 -- These are the main LSP keymappings.
 vim.api.nvim_create_autocmd('LspAttach', {
