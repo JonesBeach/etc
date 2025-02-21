@@ -33,7 +33,7 @@ vim.cmd('command Wq wqall')
 
 -- Key remaps
 vim.api.nvim_set_keymap('n', '<leader>w', '<cmd>echo expand("%:p")<CR>', { noremap = true })
--- vim.api.nvim_set_keymap('n', '<leader>wc', ':let @+=expand("%:p")<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>y', '<cmd>%y+<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>n', '<cmd>bn<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>p', '<cmd>bp<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { noremap = true })
@@ -213,7 +213,7 @@ require 'lspconfig'.rust_analyzer.setup {
   settings = {
     ["rust-analyzer"] = {
       cargo = {
-        allFeatures = true,
+        -- allFeatures = true,
         allTargets = true
       }
     }
