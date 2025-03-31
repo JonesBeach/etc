@@ -34,6 +34,7 @@ vim.cmd('command Wq wqall')
 -- Key remaps
 vim.api.nvim_set_keymap('n', '<leader>w', '<cmd>echo expand("%:p")<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>y', '<cmd>%y+<CR>', { noremap = true })
+vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>n', '<cmd>bn<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>p', '<cmd>bp<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { noremap = true })
@@ -112,7 +113,6 @@ local plugins = {
   'nvim-lua/plenary.nvim',
   'nvim-telescope/telescope.nvim',
   'sainnhe/edge',
-  'folke/noice.nvim',
   'MunifTanjim/nui.nvim',
   'rcarriga/nvim-notify',
   'neovim/nvim-lspconfig',
@@ -339,26 +339,6 @@ require 'nvim-treesitter.configs'.setup {
     "yaml",
   },
 }
-
-require("noice").setup({
-  lsp = {
-    -- override markdown rendering so that cmp and other plugins use Treesitter
-    override = {
-      ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-      ["vim.lsp.util.stylize_markdown"] = true,
-      ["cmp.entry.get_documentation"] = true,
-    },
-  },
-  -- you can enable a preset for easier configuration
-  presets = {
-    bottom_search = true,         -- use a classic bottom cmdline for search
-    command_palette = true,       -- position the cmdline and popupmenu together
-    long_message_to_split = true, -- long messages will be sent to a split
-    inc_rename = false,           -- enables an input dialog for inc-rename.nvim
-    lsp_doc_border = false,       -- add a border to hover docs and signature help
-  },
-})
-
 
 require('lualine').setup {
   options = {
