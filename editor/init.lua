@@ -213,6 +213,7 @@ require 'lspconfig'.rust_analyzer.setup {
   settings = {
     ["rust-analyzer"] = {
       cargo = {
+        features = { "c_stdlib", "wasm" },
         -- allFeatures = true,
         allTargets = true
       }
