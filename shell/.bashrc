@@ -70,3 +70,6 @@ alias gg="git grep -i"
 alias gcm="git commit -m"
 alias gc="git checkout"
 alias gcb="git checkout -b"
+
+# Created by `pipx` on 2025-02-07 12:20:46
+export PATH="$PATH:/Users/tylergreen/.local/bin"
