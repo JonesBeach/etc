@@ -161,7 +161,6 @@ require("mason-lspconfig").setup {
   -- To confirm it is installed, run: rustup component list
   ensure_installed = {
     "lua_ls",        -- Lua
-    "rust_analyzer", -- Rust
     "pyright",       -- Python
     "clangd",        -- C/C++
     "taplo",         -- TOML
@@ -209,12 +208,13 @@ require 'lspconfig'.pyright.setup {
   capabilities = capabilities,
 }
 require 'lspconfig'.rust_analyzer.setup {
+  cmd = { "rustup", "run", "stable", "rust-analyzer" },
   capabilities = capabilities,
   settings = {
     ["rust-analyzer"] = {
       cargo = {
-        features = { "c_stdlib", "wasm" },
-        -- allFeatures = true,
+        -- features = { "c_stdlib", "wasm" },
+        allFeatures = true,
         allTargets = true
       }
     }
