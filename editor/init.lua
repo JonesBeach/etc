@@ -157,8 +157,8 @@ require("neodev").setup {
 -- 3. lspconfig
 require("mason").setup {}
 require("mason-lspconfig").setup {
-  -- This prevents us from needing to run: rustup component add rust-analyzer
-  -- To confirm it is installed, run: rustup component list
+  -- Most LSP servers are managed by Mason. Rust is configured separately below
+  -- to use the rustup-managed rust-analyzer that matches the active toolchain.
   ensure_installed = {
     "lua_ls",        -- Lua
     "pyright",       -- Python
@@ -208,6 +208,7 @@ require 'lspconfig'.pyright.setup {
   capabilities = capabilities,
 }
 require 'lspconfig'.rust_analyzer.setup {
+  -- Use the toolchain-managed rust-analyzer to avoid Cargo/rust-analyzer skew.
   cmd = { "rustup", "run", "stable", "rust-analyzer" },
   capabilities = capabilities,
   settings = {
