@@ -232,7 +232,9 @@ require 'lspconfig'.lua_ls.setup {
   }
 }
 require 'lspconfig'.taplo.setup {}
-require 'lspconfig'.tsserver.setup {}
+require 'lspconfig'.tsserver.setup {
+  capabilities = capabilities,
+}
 require 'lspconfig'.eslint.setup {}
 require 'lspconfig'.intelephense.setup {}
 require 'lspconfig'.sqlls.setup {}
@@ -338,6 +340,7 @@ require 'nvim-treesitter.configs'.setup {
     "sql",
     "toml",
     "typescript",
+    "tsx",
     "yaml",
   },
 }
