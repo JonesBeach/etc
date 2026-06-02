@@ -73,3 +73,9 @@ alias gcb="git checkout -b"
 
 # Created by `pipx` on 2025-02-07 12:20:46
 export PATH="$PATH:/Users/tylergreen/.local/bin"
+
+# Needed by atuin, this adds zsh-style hooks to bash
+if [[ -r "$(brew --prefix)/etc/profile.d/bash-preexec.sh" ]]; then
+  source "$(brew --prefix)/etc/profile.d/bash-preexec.sh"
+fi
+eval "$(atuin init bash)"
